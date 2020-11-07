@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: sans-serif;
 }
 
 nav {
@@ -23,31 +24,63 @@ nav {
 }
 
 .section {
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     padding-top: 20px;
 }
 
 /* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-image01.jpg");
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
 
-    /* Set a specific height */
-    height: 50%;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
+    /* Text styles */
+    text-align: center;
+    color: white;
+
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),  url("../Images/hero-image02.jpg");
     background-size: cover;
-    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Place text in the middle of the image */
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 200px;
+
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Text styles */
     color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    /* Border styles */
+    border: 3px solid white;
+    border-radius: 20px;
+
+    /* Background styles */
+    background-color: rgba(147, 112, 219, 0.8);
 }
